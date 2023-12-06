@@ -14,10 +14,9 @@ jobs:
         with:
           node-version: '20'
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::377920611110:role/gh-actions-lambda
-          aws-session-name: gh-action-session
           aws-region: us-east-2
       - name: npm install
         env:
