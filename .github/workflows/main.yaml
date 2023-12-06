@@ -16,13 +16,9 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::377920611110:role/gh-actions-lambda
+          aws-session-name: gh-action-session
           aws-region: us-east-2
-          role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME }}
-          role-external-id: ${{ env.AWS_ROLE_EXTERNAL_ID }}
-          role-duration-seconds: 1200
-          role-session-name: MySessionName
       - name: npm install
         env:
           CI: true
