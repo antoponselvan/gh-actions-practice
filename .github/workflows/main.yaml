@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '20'
+      - name: check-env
+        run: echo {{secrets.AWS_ACCESS_KEY_ID}}
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
