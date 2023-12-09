@@ -5,7 +5,7 @@ export const handler = async () => {
   const val = _.random(max)
   const response = {
     statusCode: 200,
-    body: JSON.stringify(`Wassup from lambda! - Random# : ${val}`)
+    body: JSON.stringify(`Wassup from lambda! - Random# : ${val} - Change time : 8:37AM 9th Dec`)
   }
   return response
 }
