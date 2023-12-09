@@ -17325,7 +17325,7 @@ const handler = async () => {
   const val = lodash__WEBPACK_IMPORTED_MODULE_0__.random(max)
   const response = {
     statusCode: 200,
-    body: JSON.stringify(`Wassup from lambda! - Random# : ${val}`)
+    body: JSON.stringify(`Wassup from lambda! - - Random# : ${val}`)
   }
   return response
 }
